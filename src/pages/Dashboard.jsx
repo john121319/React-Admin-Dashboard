@@ -67,20 +67,20 @@ const RevenueByMonthsChart = () => {
   const chartOptions = {
     responsive: true,
     maintainAspectRatio: false,
-    scales: {
-      xAxis: {
-        grid: {
-          display:false,
-          drawBoard:false
-        }
-      },
-      yAxis: {
-        grid: {
-          display:false,
-          drawBoarder: false
-        }
-      }
-    },
+    // scales: {
+    //   xAxis: {
+    //     grid: {
+    //       display:false,
+    //       drawBoard:false
+    //     }
+    //   },
+    //   yAxis: {
+    //     grid: {
+    //       display:false,
+    //       drawBoarder: false
+    //     }
+    //   }
+    // },
     plugins: {
       legend: {
         display: false
