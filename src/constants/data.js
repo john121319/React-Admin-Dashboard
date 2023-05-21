@@ -14,8 +14,8 @@ const data = {
             percent: 70
         },
         {
-            title: 'Orders',
-            subtitle: 'Total orders today',
+            title: 'Customers',
+            subtitle: 'Total customers',
             value: '3000',
             percent: 49
         },
