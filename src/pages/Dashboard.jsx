@@ -2,6 +2,7 @@ import React from 'react'
 import DashboardWrapper, { DashboardWrapperMain, DashboardWrapperRight } from '../components/dashboard-wrapper/DashboardWrapper'
 import Box from '../components/box/Box'
 import { colors, data } from '../constants'
+import "./dashboard.scss"
 import SummaryBox, { SummaryBoxSpecial } from '../components/summary-box/SummaryBox'
 import { Bar } from 'react-chartjs-2'
 import {
@@ -24,12 +25,19 @@ ChartJS.register(
     Tooltip,
     Legend
 )
+import {
+  FacebookIcon,
+  TelegramIcon,
+  WhatsappIcon,
+  EmailIcon
+
+} from 'react-share';
 
 const Dashboard = () => {
   return (
     <DashboardWrapper>
       <DashboardWrapperMain>
-        <div className="">
+        
           <div className="col-8 col-md-12">
             <div className="row">
               {
@@ -44,12 +52,31 @@ const Dashboard = () => {
           <div className="col-8 hide-md">
             <SummaryBoxSpecial item={data.revenueSummary} />
           </div>
-        </div>
+        
         <div className="row">
           <div className="col-12">
             <Box>
               <RevenueByMonthsChart />
             </Box>
+          </div>
+        </div>
+        <hr/>
+        <div className='row social-media'>
+          <div className='col-6'>
+            <a href='https://www.facebook.com/yohannes.alelign' className="facebook social">
+              <FacebookIcon size={32} round />
+            </a>
+            <a href='https://t.me/jo_plus1' className="telegram social">
+              <TelegramIcon size={32} round />
+            </a>
+            <a href='https://wa.me/+251922886985'>
+              <WhatsappIcon size={32} round />
+            </a>  
+          </div>
+        </div>
+        <div className='row social-media'>
+          <div className='col-6'>
+            <i className='bx bx-phone'>+251922886985</i>
           </div>
         </div>
       </DashboardWrapperMain>
