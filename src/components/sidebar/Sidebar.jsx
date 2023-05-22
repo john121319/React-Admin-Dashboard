@@ -14,13 +14,23 @@ const Sidebar = () => {
     const activeItem = sidebarNav.findIndex(item => item.section === curPath)
     setActiveIndex(curPath.length === 0 ? 0 : activeItem)
   }, [location])
+
+  const closeSidebar = () => {
+    document.querySelector('.main__content').style.transform
+     = 'scale(1) translateX(0)'
+    setTimeout(() => {
+      document.body.classList.remove('sidebar-open')
+      document.querySelector('.main__content').style = ''
+    }, 500)
+  }
+
   return (
     <div className='sidebar'>
       <div className="sidebar__logo">
         <Link to="/">
           <img src={images.logo} alt="" />
         </Link>
-        <div className="sidebar-close">
+        <div className="sidebar-close" onClick={closeSidebar}>
           <i className="bx bx-x"></i>
         </div>
       </div>

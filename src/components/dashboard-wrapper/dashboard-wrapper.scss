@@ -6,6 +6,27 @@
     &__main {
         flex-grow: 1;
         // padding-right: $sideBarWidth;
-        margin-right: -30%;
+        // margin-right: -30%;
+        // padding-right: 0;
+
+        @include tablet {
+            padding-right: 0;
+        }
     }
+
+    // &__right {
+    //     width: $sideBarWidth;
+    //     background-color: $mainBg;
+    //     height: 100vh;
+    //     padding: $spacing;
+    //     border-top-left-radius: $borderRadius;
+    //     border-bottom-left-radius: $borderRadius;
+    //     position: fixed;
+    //     top: 0;
+    //     right: 0;
+
+    //     @include tablet {
+    //         position: relative;
+    //     }
+    // }
 }

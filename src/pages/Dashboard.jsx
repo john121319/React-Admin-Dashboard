@@ -38,7 +38,7 @@ const Dashboard = () => {
     <DashboardWrapper>
       <DashboardWrapperMain>
         
-          <div className="col-8 col-md-12">
+          <div className="col-10 col-md-12">
             <div className="row">
               {
                 data.summary.map((item, index) => (
@@ -80,9 +80,9 @@ const Dashboard = () => {
           </div>
         </div>
       </DashboardWrapperMain>
-      <DashboardWrapperRight>
-        {/* DashboardWrapperRight */}
-      </DashboardWrapperRight>
+      {/* <DashboardWrapperRight>
+        DashboardWrapperRight
+      </DashboardWrapperRight> */}
     </DashboardWrapper>
   )
 }
