@@ -1,5 +1,5 @@
 import React from 'react'
-import DashboardWrapper, { DashboardWrapperMain, DashboardWrapperRight } from '../components/dashboard-wrapper/DashboardWrapper'
+import DashboardWrapper, { DashboardWrapperMain} from '../components/dashboard-wrapper/DashboardWrapper'
 import Box from '../components/box/Box'
 import { colors, data } from '../constants'
 import "./dashboard.scss"
@@ -32,6 +32,7 @@ import {
   EmailIcon
 
 } from 'react-share';
+import { Link } from 'react-router-dom'
 
 const Dashboard = () => {
   return (
@@ -63,15 +64,18 @@ const Dashboard = () => {
         <hr/>
         <div className='row social-media'>
           <div className='col-6'>
-            <a href='https://www.facebook.com/yohannes.alelign' className="facebook social">
+            <Link to='https://www.facebook.com/yohannes.alelign' className="social-media__content">
               <FacebookIcon size={32} round />
-            </a>
-            <a href='https://t.me/jo_plus1' className="telegram social">
+            </Link>
+            <Link to = 'https://t.me/jo_plus1' className="social-media__content">
               <TelegramIcon size={32} round />
-            </a>
-            <a href='https://wa.me/+251922886985'>
+            </Link>
+            <Link to='https://wa.me/+251922886985' className='social-media__content'>
               <WhatsappIcon size={32} round />
-            </a>  
+            </Link>
+            <Link to='mailto:johniece2008@gmail.com' className='social-media__content'>
+              <EmailIcon size={32} round />
+            </Link>  
           </div>
         </div>
         <div className='row social-media'>

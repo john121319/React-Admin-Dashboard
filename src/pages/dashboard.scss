@@ -1,9 +1,13 @@
 .social-media {
     justify-content: center;
+
+    &__content {
+        padding-right: 10px;
+    }
 }
 hr{
     margin-bottom: 10px;
 }
-.social {
-    padding-right: 10px;
-}
+// .social {
+//     padding-right: 10px;
+// }
